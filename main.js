@@ -1,16 +1,17 @@
 
 let moneda = prompt("Ingrese un monto a convertir a dollar entre ARS, MOP, JPY")
+
+function convMonDol(monto, cambio) {
+     const monDol = monto / cambio;
+     return Math.round(monDol * 100) / 100;
+}
+
 switch (moneda) {
      case "ARS":
-          function convMonDol(monto, cambio) {
-               const monDol = monto / cambio;
-               return Math.round(monDol * 100) / 100;
-          }
-
                let cambioDolArs = 349;
                const monArs = parseInt(prompt("Ingrese la cantidad a convertir en peso Argentino: "));
-               const monDol = convArsDol (monArs, dolArs);
-               alert("Su cambio en dolares es: $",{dolArs});
+               const monDol = convMonDol (monArs, cambioDolArs);
+               alert(`Su cambio en dolares es: ${monDol}`);
                break;
 
      case "MOP":

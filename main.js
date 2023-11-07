@@ -22,15 +22,10 @@ switch (moneda) {
                break;
 
      case "JPY":
-          function convMonDol(monto, cambio) {
-               const monDol = monto / cambio;
-               return Math.round(monDol * 100) / 100;
-          }
-
-               let cambioDolJpy = 8;
-               const monJpy = parseInt(prompt("Ingrese la cantidad a convertir en Pataca Mecaenense: "));
-               const monDoLJpy = convArsDol (monJpy, dolJpy);
-               alert ("Su cambio en dolares es: $",{dolJpy});
+               let cambioDolJpy = 150;
+               const monJpy = parseInt(prompt("Ingrese la cantidad a convertir en Yen Japones: "));
+               const monDolJpy = convMonDol (monJpy, cambioDolJpy);
+               alert (`Su cambio en dolares es: $${monDolJpy}`);
                break;
 
      default:

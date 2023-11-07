@@ -11,19 +11,14 @@ switch (moneda) {
                let cambioDolArs = 349;
                const monArs = parseInt(prompt("Ingrese la cantidad a convertir en peso Argentino: "));
                const monDol = convMonDol (monArs, cambioDolArs);
-               alert(`Su cambio en dolares es: ${monDol}`);
+               alert(`Su cambio en dolares es: $${monDol}`);
                break;
 
      case "MOP":
-          function convMonDol(monto, cambio) {
-               const monDol = monto / cambio;
-               return Math.round(monDol * 100) / 100;
-          }
-
                let cambioDolMop = 8;
                const monMop = parseInt(prompt("Ingrese la cantidad a convertir en Pataca Mecaenense: "));
-               const monDolMop = convArsDol (monMop, dolMop);
-               alert ("Su cambio en dolares es: $",{dolMop});
+               const monDolMop = convMonDol (monMop, cambioDolMop);
+               alert (`Su cambio en dolares es: $${monDolMop}`);
                break;
 
      case "JPY":

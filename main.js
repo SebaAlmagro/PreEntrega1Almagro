@@ -1,5 +1,8 @@
+let continuar = true;
 
-let moneda = prompt("Ingrese un monto a convertir a dollar entre ARS, MOP, JPY")
+while (continuar) {
+
+let moneda = prompt("Ingrese un monto a convertir a dollar entre ARS, MOP, JPY").toUpperCase();
 
 function convMonDol(monto, cambio) {
      const monDol = monto / cambio;
@@ -31,4 +34,11 @@ switch (moneda) {
      default:
           alert("Usted a ingresado un monto incorrecto, pruebe de nuevo con ARS, MOP, JPY")
           break
+     
+     }
+
+     const respuesta = prompt("¿Desea realizar otra conversión? (Si o No)");
+     if (respuesta.toLowerCase() !== "si") {
+         continuar = false;
+     }
 }
